@@ -4,7 +4,9 @@ module.exports = {
       android: {
         sourceDir: './android',
       },
-      ios: null,
+      ios: {
+        podspecPath: './react-native-vpn-detector.podspec',
+      },
     },
   },
 };

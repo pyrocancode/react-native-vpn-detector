@@ -12,11 +12,14 @@ npm install react-native-vpn-detector
 yarn add react-native-vpn-detector
 ```
 
-On React Native 0.60+ автолинковка должна сработать автоматически. После установки не забудьте пересобрать приложение.
+On React Native 0.60+ автолинковка должна сработать автоматически. После установки не забудьте пересобрать приложение:
+
+- **iOS**: `cd ios && pod install && cd ..`
+- **Android**: обычная сборка/запуск (`gradlew assemble` или через `npx react-native run-android`).
 
 ## ⚠️ Note
 
-The VPN detector does not work on simulators. Please test on a real device.
+The VPN detector does not work reliably on simulators. Please test on a real device (both Android and iOS). 
 
 ## 🚀 Usage
 
