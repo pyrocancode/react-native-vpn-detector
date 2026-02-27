@@ -1,0 +1,35 @@
+{
+  "name": "react-native-vpn-detector",
+  "version": "0.1.0",
+  "description": "React Native module to detect VPN connection",
+  "main": "lib/commonjs/index.js",
+  "types": "lib/commonjs/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"No tests yet\"",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pyrocancode/react-native-vpn-detector.git"
+  },
+  "keywords": [
+    "react-native",
+    "vpn",
+    "detector",
+    "vpn-status"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pyrocancode/react-native-vpn-detector/issues"
+  },
+  "homepage": "https://github.com/pyrocancode/react-native-vpn-detector#readme",
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-native": ">=0.60.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
