@@ -1,5 +1,5 @@
 {
-  "name": "react-native-vpn-detector",
+  "name": "@pyrocancode/react-native-vpn-detector",
   "version": "0.1.0",
   "description": "React Native module to detect VPN connection",
   "main": "lib/commonjs/index.js",
