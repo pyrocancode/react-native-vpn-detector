@@ -1,0 +1,25 @@
+# IDE / tooling
+.idea/
+.vscode/
+*.log
+*.tgz
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Example app (demo project)
+example/
+
+# iOS / Android build artifacts
+android/.gradle/
+android/build/
+android/app/build/
+ios/Pods/
+ios/build/
+
+# Misc
+.DS_Store
