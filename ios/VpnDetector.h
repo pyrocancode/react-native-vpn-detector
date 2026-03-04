@@ -1,5 +1,4 @@
 #import <React/RCTBridgeModule.h>
-#import <React/RCT_EXTERN.h>
 
 @interface RCT_EXTERN_MODULE(VpnDetector, NSObject)
 
