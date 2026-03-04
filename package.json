@@ -16,7 +16,8 @@
     "react-native",
     "vpn",
     "detector",
-    "vpn-status"
+    "vpn-status",
+    "pyro-vpn"
   ],
   "author": "",
   "license": "MIT",
