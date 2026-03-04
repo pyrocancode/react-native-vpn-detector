@@ -1,5 +1,6 @@
 import Foundation
 import React
+import CFNetwork
 
 @objc(VpnDetector)
 class VpnDetector: NSObject, RCTBridgeModule {
@@ -25,6 +26,21 @@ class VpnDetector: NSObject, RCTBridgeModule {
   }
 
   private static func checkVpnStatus() throws -> Bool {
+    // 1. Try CFNetwork scoped proxy settings (similar to Expo example)
+    if let cfDict = CFNetworkCopySystemProxySettings()?.takeRetainedValue() as? [String: Any],
+       let scoped = cfDict["__SCOPED__"] as? [String: Any] {
+      for key in scoped.keys {
+        if key.contains("tap") ||
+          key.contains("tun") ||
+          key.contains("ppp") ||
+          key.contains("ipsec") ||
+          key.contains("utun") {
+          return true
+        }
+      }
+    }
+
+    // 2. Fallback to interface enumeration via getifaddrs
     var addressList: UnsafeMutablePointer<ifaddrs>?
     guard getifaddrs(&addressList) == 0, let firstAddress = addressList else {
       return false
