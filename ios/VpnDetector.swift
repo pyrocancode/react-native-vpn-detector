@@ -1,16 +1,21 @@
 import Foundation
+import React
 
 @objc(VpnDetector)
-class VpnDetector: NSObject {
+class VpnDetector: NSObject, RCTBridgeModule {
 
-  @objc
-  static func requiresMainQueueSetup() -> Bool {
+  // Name exposed to JS: NativeModules.VpnDetector
+  static func moduleName() -> String! {
+    return "VpnDetector"
+  }
+
+  @objc static func requiresMainQueueSetup() -> Bool {
     return false
   }
 
   @objc(isVpnActive:rejecter:)
-  func isVpnActive(resolve: @escaping RCTPromiseResolveBlock,
-                   reject: @escaping RCTPromiseRejectBlock) {
+  func isVpnActive(_ resolve: @escaping RCTPromiseResolveBlock,
+                   rejecter reject: @escaping RCTPromiseRejectBlock) {
     do {
       let vpnActive = try Self.checkVpnStatus()
       resolve(vpnActive)
