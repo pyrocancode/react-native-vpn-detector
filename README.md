@@ -7,9 +7,9 @@
 Install the package with npm or yarn:
 
 ```bash
-npm install react-native-vpn-detector
+npm install @pyrocancode/react-native-vpn-detector
 # or
-yarn add react-native-vpn-detector
+yarn add @pyrocancode/react-native-vpn-detector
 ```
 
 On React Native 0.60+ автолинковка должна сработать автоматически. После установки не забудьте пересобрать приложение:
@@ -30,7 +30,7 @@ The `useIsVpnActive` hook lets your component reactively track whether a VPN con
 ```javascript
 import React from "react";
 import { View, Text } from "react-native";
-import { useIsVpnActive } from "react-native-vpn-detector";
+import { useIsVpnActive } from "@pyrocancode/react-native-vpn-detector";
 
 const App = () => {
   const isVpnActive = useIsVpnActive();
@@ -50,7 +50,7 @@ The `isVpnActive` function checks if a VPN connection is active (one-time check)
 ```javascript
 import React, { useEffect, useState } from "react";
 import { View, Text } from "react-native";
-import { isVpnActive } from "react-native-vpn-detector";
+import { isVpnActive } from "@pyrocancode/react-native-vpn-detector";
 
 const App = () => {
   const [value, setValue] = useState(null);
@@ -74,7 +74,7 @@ The `addEventListener` function listens for changes in the VPN connection status
 ```javascript
 import React, { useEffect } from "react";
 import { View, Text } from "react-native";
-import { addEventListener } from "react-native-vpn-detector";
+import { addEventListener } from "@pyrocancode/react-native-vpn-detector";
 
 const App = () => {
   useEffect(() => {
